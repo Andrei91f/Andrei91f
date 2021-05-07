@@ -1,5 +1,7 @@
 package ru.studying.springboot.personsdemo.rest;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,7 +36,7 @@ public class PersonRestController {
 	}
 	
 	@PostMapping("/persons")
-	public Person addEmployee(@RequestBody Person thePerson) {
+	public Person addEmployee(@Valid @RequestBody Person thePerson) {
 		personService.addPerson(thePerson);	
 		return thePerson;
 	}

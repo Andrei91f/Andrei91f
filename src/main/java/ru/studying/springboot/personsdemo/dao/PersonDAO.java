@@ -4,7 +4,7 @@ import ru.studying.springboot.personsdemo.entity.Person;
 
 public interface PersonDAO {
 	
-	public Person getPersonById(int theId);
+	 Person getPersonById(int theId);
 	
-	public void addPerson(Person thePerson);
+	 void addPerson(Person thePerson);
 }
